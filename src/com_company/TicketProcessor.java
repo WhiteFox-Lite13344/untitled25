@@ -1,4 +1,4 @@
-package com.company;
+package com_company;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,11 +27,11 @@ public class TicketProcessor {
 
     private CompletableFuture<Void> processTicket(Ticket ticket) {
         return CompletableFuture.runAsync(() -> {
-            Result base = new Result.Base();
-            Result parse = new Result.Parse(base);
+            ResultBase base = new ResultBase();
+            ResultParse parse = new ResultParse(base);
 
-            parse.add(ticket.value(), ticket.id());
-            parse.output();
+            parse.setValue(ticket.value(), ticket.id());
+            parse.print();
 
             synchronized (results) {
                 results.add(parse);
@@ -39,7 +39,7 @@ public class TicketProcessor {
         }, executor);
     }
 
-    public String output() {
+    public String print() {
         StringBuilder result = new StringBuilder();
         results.forEach(parse -> result.append(parse.toString()).append("\n"));
         return result.toString();

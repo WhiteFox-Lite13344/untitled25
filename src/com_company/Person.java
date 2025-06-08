@@ -1,4 +1,4 @@
-package com.company;
+package com_company;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -16,7 +16,7 @@ public record Person(
 
 
 public Stream<Key> keys(){
-    return Stream.of(Keys.values());
+    return Stream.of(KEYS.values());
 }
 
 public Map<String, String> toMap(){

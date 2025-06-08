@@ -1,8 +1,8 @@
-package com.company;
+package com_company;
 
 
 
-public enum Keys implements Key {
+public enum KEYS implements Key {
     ID {
         @Override
         public String naming() { return "ID"; }

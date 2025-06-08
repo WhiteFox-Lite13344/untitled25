@@ -1,4 +1,4 @@
-package com.company;
+package com_company;
 
 
 import java.util.List;
@@ -6,7 +6,7 @@ import java.util.List;
 public class Main {
 
     public static void main(String[] args) {
-//        Result base = new Result.Base();
+//        Result base = new Result.ResultBase();
 //        Result parse = new Result.Parse(base);
 //
 //        base.add("Сектор A12 Ряд 5 Место 16",2L);
@@ -33,7 +33,7 @@ public class Main {
         processor.process(tickets);
 
         // Выводим результаты
-        System.out.println(processor.output());
+        System.out.println(processor.print());
     }
 }
 

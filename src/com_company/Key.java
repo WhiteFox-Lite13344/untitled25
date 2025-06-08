@@ -1,4 +1,4 @@
-package com.company;
+package com_company;
 
 public interface Key {
     String naming();
